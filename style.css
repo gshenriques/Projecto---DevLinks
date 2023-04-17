@@ -42,7 +42,8 @@ body *{
 
 #container{
     /*border: 1px solid red;*/
-    width: 360px;
+    width: 100%;
+    max-width:588px;
     /* sentralizar uma caixa
     margin-right: auto;
     margin-left:auto;*/
@@ -66,7 +67,7 @@ body *{
     border:0;
     position:absolute;
     top: 50%;
-    left:0;
+    right:0;
     z-index:1;
     transform: translateY(-50%)
 }
