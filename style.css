@@ -68,11 +68,12 @@ body *{
     border:0;
     position:absolute;
     top: 50%;
-    left:0;
+    left:50%;
     right:0;
     z-index:1;
     transform: translateY(-50%)
 }
+
 
 #switch span{
     display: block;
@@ -86,11 +87,12 @@ body *{
 
 }
 .light #switch button {
-    right:0;
-    left:initial;
+    animation: slide-in 0.4s;
 }
-/*profile*/
 
+
+/*profile*/
+ 
 #profile{
     text-align: center;
     padding:24px;
@@ -148,6 +150,7 @@ ul li a:hover {
     font-size: 24px;
     
 }
+
 #social_links  a{
     display: flex;
     align-items: center;
@@ -168,12 +171,25 @@ footer{
     font-size:14px;
 }
 
+/* media queries*/
 @media (min-width: 700px){
     :root{
-        --bg-url: url(./assets/bg-desktop-dark.jpg);
+        --bg-url: url(assets/bg-\ desktop-dark.jpg);
     }
 
     .light {
-        --bg-url: url(./assets/bg-desketop-light.jpg);
+        --bg-url: url(assets/bg-desktop-light\ .jpg);
+    }
+}
+
+/* animation */
+
+@keyframes slide-in {
+    from{
+        left:0;
+    }
+
+    to{
+        left:50%;
     }
 }
