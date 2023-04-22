@@ -12,6 +12,7 @@
     --surface-color-mode-hover:  rgba(255, 255, 255, 0.05);
     --social-links-hover:  rgba(255, 255, 255, 0.2);
     --switch-bg-url: url(assets/moon-stars.svg);
+    --highlight-color: #FFFFFF33;
     
 
 }
@@ -23,6 +24,7 @@
     --surface-color-mode-hover:  rgba(0, 0, 0, 0.02);
     --social-links-hover: rgba(0, 0, 0, 0.1);
     --switch-bg-url: url(assets/sun.svg);
+    --highlight-color: #0000001A;
 
 }
 body{
@@ -68,10 +70,10 @@ body *{
     border:0;
     position:absolute;
     top: 50%;
-    left:50%;
-    right:0;
+    /*left:0;*/
     z-index:1;
-    transform: translateY(-50%)
+    transform: translateY(-50%);
+    animation: slide-out 0.5s;
 }
 
 
@@ -87,7 +89,10 @@ body *{
 
 }
 .light #switch button {
-    animation: slide-in 0.4s;
+    animation: slide-in 0.5s forwards;
+}
+#switch button:hover{
+ outline: 8px solid var(--highlight-color);
 }
 
 
@@ -188,8 +193,15 @@ footer{
     from{
         left:0;
     }
-
     to{
         left:50%;
+    }
+}
+@keyframes slide-out{
+    from{
+        left:50%;
+    }
+    to{
+        left:0;
     }
 }
